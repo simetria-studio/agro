@@ -5,15 +5,15 @@
 
 
 <div class="card m-5 col-md-10">
-    <p>Portos</p>
+    <p>Cidades</p>
       <div>
             <a href="{{ route('admin.porto.create') }}"><button class="btn btn-dark my-2">Adicionar
-                        Porto</button></a>
+                        Cidade</button></a>
             <table class="table table-striped">
                   <thead>
                         <tr>
                               <th scope="col">ID</th>
-                              <th scope="col">Porto</th>
+                              <th scope="col">Cidade</th>
                               <th scope="col">Foto</th>
                               <th scope="col">Acão</th>
                         </tr>
