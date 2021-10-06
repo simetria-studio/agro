@@ -9,25 +9,25 @@
             <div class="row">
                 <div class="">
                     <div class="form-group col-md-12">
-                        <label for="exampleInputEmail1">Nome do Porto</label>
+                        <label for="exampleInputEmail1">Nome da Cidade</label>
                         <input type="text" class="form-control" name="nome">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="exampleInputEmail1">Sigla do Porto</label>
+                        <label for="exampleInputEmail1">Sigla da Cidade</label>
                         <input type="text" class="form-control" name="sigla">
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="exampleInputEmail1">Foto do Porto</label>
+                        <label for="exampleInputEmail1">Foto da Cidade</label>
                         <input type="file" required class="form-control" name="image">
                     </div>
-                    <div class="form-group col-md-6">
+                    {{-- <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"></label>
                         <input type="checkbox" name="registro" id="registo">
                         <label class="form-check-label" for="defaultCheck1">
                             Porto de Registo
                         </label>
-                    </div>
-                    <div class="form-group col-md-6">
+                    </div> --}}
+                    {{-- <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"></label>
                         <input type="checkbox" name="veterinario" id="veterinario">
                         <label class="form-check-label" for="defaultCheck1">
@@ -44,8 +44,8 @@
                         <label class="form-check-label" for="defaultCheck1">
                             Porto de Descarga
                         </label>
-                    </div>
-                    <div class="form-group col-md-6">
+                    </div> --}}
+                    {{-- <div class="form-group col-md-6">
                         <label for="exampleInputEmail1">Espécies do Porto</label>
                         <select class="select2" required name="especies[]" multiple>
                             @foreach ($especies as $especie)
@@ -53,7 +53,7 @@
                             @endforeach
 
                         </select>
-                    </div>
+                    </div> --}}
                     <div class="form-group col-md-6">
                         <label for="exampleInputEmail1"></label>
                         <input type="submit" class="form-control btn btn-dark" id="exampleInputEmail1"
