@@ -52,7 +52,7 @@
     <script src="{{ url('app-comercial/js/script.js') }}"></script>
     <script src="{{ url('app-store/js/script.js') }}"></script>
     <script>
-        $('#ceping').mask('0000-000');
+        $('#ceping').mask('00000-000');
     </script>
     @if (Session::has('success'))
         <script type="text/javascript">

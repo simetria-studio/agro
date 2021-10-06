@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="text-center text-white p-5">
-        <h4>REGISTRO PESCADOR</h4>
+        <h4>REGISTRO PRODUTOR</h4>
     </div>
 </div>
 <div>
@@ -17,115 +17,110 @@
                 @csrf
                 <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>VAMOS COMEÇAR O CADASTRO</b></h2>
-                    <div class="text-label">SEU PRIMEIRO NOME</div>
+                    <div class="text-label">SEU NOME COMPLETO</div>
                     <div class="form-group mt-3 mb-5 input-material">
-                            <input type="text" placeholder="Seu Nome" name="name" oninput="this.className = ''">
+                            <input type="text" placeholder="Nome e Sobrenome" name="name" oninput="this.className = ''">
                     </div>
                 </div>
 
-                <div class="tab">
+                {{-- <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
                     <div class="text-label">APELIDO</div>
                     <div class="form-group mt-3 mb-5 input-material">
                         <input type="text" placeholder="Seu Apelido" name="lastname" oninput="this.className = ''">
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
-                    <div class="text-label">SEU NIF</div>
+                    <div class="text-label">SEU CPF</div>
                     <div class="form-group mt-3 mb-5 input-material">
-                        <input type="text" placeholder="Seu NIF" name="nif" id="NIF" oninput="this.className = ''">
+                        <input type="text" placeholder="Seu CPF" name="cpf" id="cpf" oninput="this.className = ''">
                     </div>
                 </div>
 
-                <div class="tab">
+                {{-- <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
                     <div class="text-label">SEU IBAN</div>
                     <div class="form-group mt-3 mb-5 input-material">
                         <input type="text" placeholder="Seu IBAN" name="iban" oninput="this.className = ''">
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
-                    <div class="text-label">SEU TELEMÓVEL</div>
+                    <div class="text-label">SEU TELEFONE</div>
                     <div class="form-group mt-4 mb-5 input-material input-telemovel">
-                            <input type="text" placeholder="+000" name="ddd_telemovel" value="+351" oninput="this.className = ''">
-                            <input type="text" placeholder="000000000" name="telemovel" oninput="this.className = ''">
+                            <input type="text" placeholder="+000" name="ddd_telemovel" value="+55" oninput="this.className = ''">
+                            <input type="text" placeholder="(00)00000-0000" name="telemovel" oninput="this.className = ''">
                     </div>
                 </div>
 
                 <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
-                    <div class="text-label">ESCOLHA O PORTO DE REGISTRO</div>
+                    <div class="text-label">ESCOLHA A CIDADE DE REGISTRO</div>
                     <div class="form-group mt-4 mb-5 input-material">
                         <select name="porto" oninput="this.className = ''">
-                            <option>Escolha o Porto de Registo</option>
+                            <option>Escolha a cidade de Registo</option>
                             @foreach ($portos as $porto)
                                 <option value="{{ $porto->id }}">{{ $porto->nome }}</option>
                             @endforeach
                         </select>
                     </div>
                 </div>
-    
+
                 <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
-                    <div class="text-label">REGISTRE SUA EMBARCAÇÃO</div>
+                    <div class="text-label">REGISTRE SUA FAZENDA</div>
                     <div class="form-group mt-3 mb-5 input-material embarcacao-1">
-                        <input type="text" placeholder="Embarcação 1" name="nome_embarcacao_1" oninput="this.className = ''">
-                        <i class="fas fa-plus-circle add-embarcacao" data-embarcacao="2"></i>
+                        <input type="text" placeholder="Nome da sua Fazenda" name="nome_fazenda" oninput="this.className = ''">
+                        {{-- <i class="fas fa-plus-circle add-embarcacao" data-embarcacao="2"></i> --}}
                     </div>
-                    <div class="form-group mt-3 mb-5 input-material d-none embarcacao-2">
+                    {{-- <div class="form-group mt-3 mb-5 input-material d-none embarcacao-2">
                         <i class="fas fa-plus-circle add-embarcacao" data-embarcacao="3"></i>
-                    </div>
-                    <div class="form-group mt-3 mb-5 input-material d-none embarcacao-3">
-                    </div>
+                    </div> --}}
+                    {{-- <div class="form-group mt-3 mb-5 input-material d-none embarcacao-3">
+                    </div> --}}
                 </div>
 
                 <div class="tab">
-                    <div class="text-label2">CÓDIGO POSTAL</div>
+                    <div class="text-label2">CEP</div>
                     <div class="form-group mt-3 mb-5 d-flex input-material input-especial">
-                        <input type="text" id="ceping" name="codigo_postal">
+                        <input type="text" id="ceping" name="cep">
 
                         <button type="button" id="buscaring" class="btn ml-2">Buscar</button>
                     </div>
 
-                    <div class="text-label2">MORADA</div>
+                    <div class="text-label2">RUA</div>
                     <div class="form-group mt-3 mb-5 d-flex input-material">
-                        <input type="text" id="morada" name="morada">
+                        <input type="text" id="rua" name="rua">
                     </div>
 
-                    <div class="text-label2">REGIÃO</div>
+                    <div class="text-label2">NUMERO</div>
                     <div class="form-group mt-3 mb-5 d-flex input-material">
-                        <input type="text" id="regiao" name="regiao">
+                        <input type="text" id="numero" name="numero">
                     </div>
 
-                    <div class="text-label2">PORTA</div>
+                    <div class="text-label2">BAIRRO</div>
                     <div class="form-group mt-3 mb-5 d-flex input-material">
-                        <input type="text" id="porta" name="porta">
+                        <input type="text" id="bairro" name="bairro">
                     </div>
 
-                    <div class="text-label2">DISTRITO</div>
+                    <div class="text-label2">CIDADE</div>
                     <div class="form-group mt-3 mb-5 d-flex input-material">
-                        <input type="text" id="distrito" name="distrito">
+                        <input type="text" id="cidade" name="cidade">
                     </div>
 
-                    <div class="text-label2">CONSELHO</div>
+                    <div class="text-label2">ESTADO</div>
                     <div class="form-group mt-3 mb-5 d-flex input-material">
-                        <input type="text" id="conselho" name="conselho">
-                    </div>
-
-                    <div class="text-label2">FREGUESIA</div>
-                    <div class="form-group mt-3 mb-5 d-flex input-material">
-                        <input type="text" id="freguesia" name="freguesia">
+                        <input type="text" id="estado" name="estado">
                     </div>
 
                     <input type="hidden" id="latitude" name="latitude">
                     <input type="hidden" id="longitude" name="longitude">
                 </div>
 
-                
+
                 <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
                     <div class="text-label">SEU EMAIL</div>

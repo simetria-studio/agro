@@ -8,7 +8,7 @@
       <!-- CSRF Token -->
       <meta name="csrf-token" content="{{ csrf_token() }}">
 
-      <title>Karapau</title>
+      <title>AGRO ROCKET</title>
 
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -49,13 +49,13 @@
       <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
       <script src="{{ url('js/jquery.countdown.min.js') }}"></script>
       <script src="{{ url('painel/js/timer.js') }}"></script>
-      <script src="{{ url('js/global.js') }}"></script>
+      <script type="module" src="{{ url('js/global.js') }}"></script>
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
       <script src="{{ url('app-comercial/js/script.js') }}"></script>
       <script src="{{ url('app-pescador/js/script.js') }}"></script>
       <script src="{{asset('plugin/select2/js/select2.full.min.js')}}"></script>
       <script>
-            $('#ceping').mask('0000-000');
+            $('#ceping').mask('00000-000');
             $('.select2').select2();
       </script>
       @if(Session::has('success'))

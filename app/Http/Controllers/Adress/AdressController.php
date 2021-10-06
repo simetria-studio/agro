@@ -37,30 +37,30 @@ class AdressController extends Controller
         $valor = $request->search;
         $cep = str_replace('-', '', $valor);
 
-        $url = Http::get('https://api.duminio.com/ptcp/ptapi60ec808f3e8951.33243239/'.$cep);
-        $dadosFirst = str_replace('<i>Desconhecido</i>', '"false"', $url->body());
-        $dadosFirst = str_replace(' ,', '"false",', $dadosFirst);
-        $dadosFirst = json_decode($dadosFirst);
+        $url2 = Http::get("https://viacep.com.br/ws/$cep/json/");
+        // $dadosFirst = str_replace('<i>Desconhecido</i>', '"false"', $url->body());
+        // $dadosFirst = str_replace(' ,', '"false",', $dadosFirst);
+        // $dadosFirst = json_decode($dadosFirst);
 
-        if($dadosFirst){
-            if($dadosFirst->Latitude !== 'false' && $dadosFirst->Longitude !== 'false'){
-                return response()->json($dadosFirst);
-            }
-        }
+        // if($dadosFirst){
+        //     if($dadosFirst->Latitude !== 'false' && $dadosFirst->Longitude !== 'false'){
+        //         return response()->json($dadosFirst);
+        //     }
+        // }
 
-        $url = Http::get('https://maps.google.com/maps/api/geocode/json?address='.$request->search.'&sensor=false&key=AIzaSyCcTnukB7zVZVr3T-Pk6-Lptswge0BDOXg');
-        $dados = json_decode($url->collect());
-
+        $url = Http::get('https://maps.google.com/maps/api/geocode/json?address='.$cep.'&sensor=false&key=AIzaSyCcTnukB7zVZVr3T-Pk6-Lptswge0BDOXg');
+        $google = json_decode($url->collect());
+        $api = json_decode($url2->collect());
         $dados = [
-            'CodigoPostal' => $dados->results[0]->address_components[0]->long_name,
-            'Morada' => $dadosFirst->Morada,
-            'Localidade' => $dados->results[0]->address_components[1]->long_name,
-            'Freguesia' => $dadosFirst->Freguesia,
-            'Concelho' => $dadosFirst->Concelho,
-            'Distrito' => $dados->results[0]->address_components[2]->long_name,
-            'Latitude' => $dados->results[0]->geometry->location->lat,
-            'Longitude' => $dados->results[0]->geometry->location->lng,
+            'Cep' => $api->cep,
+            'Rua' => $api->logradouro,
+            'Bairro' => $api->bairro,
+            'Cidade' => $api->localidade,
+            'Estado' => $api->uf,
+            'Latitude' => $google->results[0]->geometry->location->lat,
+            'Longitude' => $google->results[0]->geometry->location->lng,
         ];
+
 
         return response()->json($dados);
     }

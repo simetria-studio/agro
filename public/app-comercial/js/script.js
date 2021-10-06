@@ -42,8 +42,10 @@ $(document).ready(function() {
       });
 
       $('[name="ddd_telemovel"], [name="ddd_telemovel_empresa"], [name="ddd_telefone_empresa"], [name="ddd_telemovel_propietario"]').mask('+000');
-      $('[name="telemovel_empresa"], [name="telefone_empresa"], [name="telemovel_propietario"], [name="telemovel"]').mask('000000000');
+      $('[name="telemovel_empresa"], [name="telefone_empresa"], [name="telemovel_propietario"], [name="telemovel"]').mask('(00)00000-0000');
 });
+
+$('#cpf').mask('000.000.000-00');
 
 $('#buscaring').on('click', function() {
       $value = $('#ceping').val();
@@ -55,11 +57,10 @@ $('#buscaring').on('click', function() {
             },
             success: function(data) {
                   console.log(data);
-                  $('#morada').val(data.Morada);
-                  $('#regiao').val(data.Localidade);
-                  $('#distrito').val(data.Distrito);
-                  $('#conselho').val(data.Concelho);
-                  $('#freguesia').val(data.Freguesia);
+                  $('#rua').val(data.Rua);
+                  $('#bairro').val(data.Bairro);
+                  $('#cidade').val(data.Cidade);
+                  $('#estado').val(data.Estado);
                   $('#latitude').val(data.Latitude);
                   $('#longitude').val(data.Longitude);
             }
