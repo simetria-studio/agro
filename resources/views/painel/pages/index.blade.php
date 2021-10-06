@@ -11,7 +11,7 @@
                 <div class="inner">
                   <h3>{{ $pescadores->count() }}</h3>
 
-                  <p>PESCADORES</p>
+                  <p>PRODUTORES</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
