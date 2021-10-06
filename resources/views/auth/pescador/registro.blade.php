@@ -3,12 +3,12 @@
 @section('content')
 <div class="header">
     <div class="container">
-        <div class="py-4 text-center">
-            <img class="img-fluid " src="{{ url('app-comercial/img/logo-img.svg') }}" alt="">
-        </div>
+          <div class="pt-3 text-center">
+                <img class="img-fluid " src="{{ url('app-comercial/img/logo-img.svg') }}" alt="">
+          </div>
     </div>
-    <div class="text-center text-white p-5">
-        <h4>REGISTRO PRODUTOR</h4>
+    <div class="text-center text-white px-5 pb-3">
+          <h4>REGISTRO PRODUTOR</h4>
     </div>
 </div>
 <div>
