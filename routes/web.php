@@ -220,7 +220,7 @@ Route::middleware(['auth:consultor'])->group(function () {
 
 /*  Login Pescador */
 
-Route::get('login-pescador', [PescadorController::class, 'index'])->name('login.pescador');
+Route::get('login-produtor', [PescadorController::class, 'index'])->name('login.pescador');
 Route::get('produtor-create', [PescadorRegController::class, 'index'])->name("pescador.create");
 Route::post('pescadores-store', [PescadorRegController::class, 'store'])->name('pescador.store');
 Route::post('pescador-login', [PescadorController::class, 'store'])->name('pescador.login');
