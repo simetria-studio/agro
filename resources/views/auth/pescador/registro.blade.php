@@ -71,9 +71,9 @@
 
                 <div class="tab">
                     <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
-                    <div class="text-label">REGISTRE SUA FAZENDA</div>
+                    <div class="text-label">REGISTRE SUA PROPRIEDADE</div>
                     <div class="form-group mt-3 mb-5 input-material embarcacao-1">
-                        <input type="text" placeholder="Nome da sua Fazenda" name="nome_fazenda" oninput="this.className = ''">
+                        <input type="text" placeholder="Nome da sua Propriedade" name="nome_fazenda" oninput="this.className = ''">
                         {{-- <i class="fas fa-plus-circle add-embarcacao" data-embarcacao="2"></i> --}}
                     </div>
                     {{-- <div class="form-group mt-3 mb-5 input-material d-none embarcacao-2">
