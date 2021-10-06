@@ -16,12 +16,16 @@ class CreateAdressBuyersTable extends Migration
         Schema::create('adress_buyers', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string('morada')->nullable();
-            $table->string('codigo_postal')->nullable();
-            $table->string('regiao')->nullable();
-            $table->string('distrito')->nullable();
-            $table->string('conselho')->nullable();
-            $table->string('freguesia')->nullable();
+            $table->string('cep')->nullable();
+            $table->string('cidade')->nullable();
+            $table->string('estado')->nullable();
+            $table->string('pais')->default('BR');
+            $table->string('bairro')->nullable();
+            $table->string('rua')->nullable();
+            $table->string('numero')->nullable();
+            $table->string('complemento')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->timestamps();
         });
     }

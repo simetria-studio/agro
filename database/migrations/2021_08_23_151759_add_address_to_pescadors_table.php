@@ -14,12 +14,14 @@ class AddAddressToPescadorsTable extends Migration
     public function up()
     {
         Schema::table('pescadors', function (Blueprint $table) {
-            $table->string('codigo_postal')->nullable();
-            $table->string('regiao')->nullable();
-            $table->string('porta')->nullable();
-            $table->string('distrito')->nullable();
-            $table->string('conselho')->nullable();
-            $table->string('freguesia')->nullable();
+            $table->string('cep')->nullable();
+            $table->string('cidade')->nullable();
+            $table->string('estado')->nullable();
+            $table->string('pais')->default('BR');
+            $table->string('bairro')->nullable();
+            $table->string('rua')->nullable();
+            $table->string('numero')->nullable();
+            $table->string('complemento')->nullable();
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
         });

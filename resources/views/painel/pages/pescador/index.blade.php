@@ -8,14 +8,14 @@
                         <div class="col-12 mt-5">
                               <div class="card">
                                     <div class="card-header"><h3 class="card-tilte">Pescadores</h3></div>
-      
+
                                     <div class="card-body">
                                           <div class="table-responsive">
                                                 <table class="table">
                                                       <thead class="thead-dark">
                                                             <tr>
                                                                   <th scope="col">Nome</th>
-                                                                  <th scope="col">Embarcação</th>
+                                                                  <th scope="col">Fazenda</th>
                                                                   <th scope="col">E-mail</th>
                                                                   <th scope="col">Ação</th>
                                                             </tr>
@@ -47,8 +47,8 @@
                                                                                           <input type="hidden" value="0" name="status">
                                                                                           <button type="submit" style="background: none; border: none; font-size: 1.5em; color: green;" class="fas fa-check"></button>
                                                                                           @endif
-                                          
-                                          
+
+
                                                                                     </form>
                                                                               </div>
                                                                               <div class="mx-1">
@@ -58,12 +58,12 @@
                                                                   </td>
                                                             </tr>
                                                             @endforeach
-                                          
-                                          
+
+
                                                       </tbody>
                                                 </table>
                                           </div>
-      
+
                                           <div>{{ $pescadores->links() }}</div>
                                     </div>
                               </div>

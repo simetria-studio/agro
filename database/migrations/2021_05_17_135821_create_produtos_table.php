@@ -23,12 +23,11 @@ class CreateProdutosTable extends Migration
             $table->unsignedBigInteger('especie_id');
             $table->foreign('especie_id')->references('id')->on('especies')->onUpdate('cascade')
             ->onDelete('cascade');
-           
+
             $table->unsignedBigInteger('porto_id');
             $table->foreign('porto_id')->references('id')->on('portos')->onUpdate('cascade')
             ->onDelete('cascade');
 
-            $table->string('embarcacao');
             $table->string('zona')->nullable();
             $table->string('tamanho')->nullable();
             $table->string('arte')->nullable();

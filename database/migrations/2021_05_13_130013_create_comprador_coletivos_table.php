@@ -23,7 +23,7 @@ class CreateCompradorColetivosTable extends Migration
             $table->string('password-confirm')->nullable();
             $table->string('telemovel');
             $table->string('morada');
-            $table->string('nif')->nullable();
+            $table->string('cpf')->nullable();
             $table->string('tipo');
             $table->string('status')->default(0);
             $table->timestamps();

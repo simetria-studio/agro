@@ -16,17 +16,13 @@ class CreatePescadorsTable extends Migration
         Schema::create('pescadors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('lastname');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('telefone');
-            $table->string('morada');
-            $table->string('nif');
-            $table->string('iban');
-            $table->string('porto');
-            $table->string('fishing_zone');
-            $table->string('nome_embarcacao');
+            $table->string('telefone')->nullable();
+            $table->string('morada')->nullable();
+            $table->string('cpf');
+            $table->string('fazenda')->nullable();
             $table->integer('status')->default(0);
             $table->timestamps();
         });
