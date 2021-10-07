@@ -17,7 +17,7 @@ class CreateBuyerInduvidualsTable extends Migration
             $table->id();
             $table->integer('comprador_id')->nullable();
             $table->string('morada')->nullable();
-            $table->string('nif')->nullable();
+            $table->string('cpf')->nullable();
             $table->timestamps();
         });
     }

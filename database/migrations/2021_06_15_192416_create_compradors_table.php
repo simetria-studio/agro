@@ -17,12 +17,11 @@ class CreateCompradorsTable extends Migration
             $table->id();
             $table->integer('user_id')->nullable();
             $table->string('name');
-            $table->string('lastname')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('codigo');
-            $table->string('telemovel')->nullable();
+            $table->string('telefone')->nullable();
             $table->string('status')->default(0);
             $table->string('type');
             $table->rememberToken();

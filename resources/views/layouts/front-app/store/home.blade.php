@@ -16,7 +16,7 @@
         rel="stylesheet">
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ url('front-app/store/assets/css/dash/style.min.css') }}">
-    <title>Karapau</title>
+    <title>AGRO ROCKET</title>
 </head>
 
 <body>
