@@ -38,25 +38,21 @@
                         <input type="text" placeholder="Nome do Comprador" name="name" oninput="this.className = ''">
                   </div>
 
-                  <div class="text-label">APELIDO DO COMPRADOR</div>
+            </div>
+
+            <div class="tab">
+                  <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
+                  <div class="text-label">CPF DO COMPRADOR</div>
                   <div class="form-group mt-4 mb-5 input-material">
-                        <input type="text" placeholder="Apelido do Comprador" name="sobrenome" oninput="this.className = ''">
+                        <input type="text" placeholder="Cpf do Comprador" id="cpf" name="cpf" oninput="this.className = ''">
                   </div>
             </div>
 
             <div class="tab">
                   <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
-                  <div class="text-label">NIF DO COMPRADOR</div>
+                  <div class="text-label">TELEFONE DO COMPRADOR</div>
                   <div class="form-group mt-4 mb-5 input-material">
-                        <input type="number" placeholder="Nif do Comprador" id="NIF" name="nif" oninput="this.className = ''">
-                  </div>
-            </div>
-
-            <div class="tab">
-                  <h2 class="mt-2 mb-5 text-white"><b>CONTINUE COM O CADASTRO</b></h2>
-                  <div class="text-label">TELEMÓVEL DO COMPRADOR</div>
-                  <div class="form-group mt-4 mb-5 input-material">
-                        <input type="number" placeholder="+000 000000000" name="telemovel" oninput="this.className = ''">
+                        <input type="number" placeholder="" name="telefone" oninput="this.className = ''">
                   </div>
             </div>
 
@@ -69,40 +65,40 @@
             </div>
 
             <div class="tab">
-                  <div class="text-label2">CÓDIGO POSTAL</div>
+                  <div class="text-label2">CEP</div>
                   <div class="form-group mt-4 mb-5  d-flex input-material input-especial">
-                        <input class="cep-input" type="text" id="ceping" name="codigo_postal">
+                        <input class="cep-input" type="text" id="ceping" name="cep">
                         <button type="button" id="buscaring" class="btn">Buscar</button>
                   </div>
-                  <div class="text-label2">MORADA</div>
+                  <div class="text-label2">RUA</div>
                   <div class="form-group mt-4 mb-5 d-flex input-material">
-                        <input type="text" id="morada" name="morada">
+                        <input type="text" id="rua" name="rua">
                   </div>
 
-                  <div class="text-label2">REGIÃO</div>
+                  <div class="text-label2">NUMERO</div>
                   <div class="form-group mt-4 mb-5 d-flex input-material">
-                        <input type="text" id="regiao" name="regiao">
+                        <input type="text" id="numero" name="numero">
+                  </div>
+                  <div class="text-label2">COMPLEMENTO</div>
+                  <div class="form-group mt-4 mb-5 d-flex input-material">
+                        <input type="text" id="complemento" name="complemento">
                   </div>
 
-                  <div class="text-label2">PORTA</div>
+                  <div class="text-label2">BAIRRO</div>
                   <div class="form-group mt-4 mb-5 d-flex input-material">
-                        <input type="text" id="porta" name="porta">
+                        <input type="text" id="bairro" name="bairro">
                   </div>
 
-                  <div class="text-label2">DISTRITO</div>
+                  <div class="text-label2">CIDADE</div>
                   <div class="form-group mt-4 mb-5 d-flex input-material">
-                        <input type="text" id="distrito" name="distrito">
+                        <input type="text" id="cidade" name="cidade">
                   </div>
 
-                  <div class="text-label2">CONSELHO</div>
+                  <div class="text-label2">ESTADO</div>
                   <div class="form-group mt-4 mb-5 d-flex input-material">
-                        <input type="text" id="conselho" name="conselho">
+                        <input type="text" id="estado" name="estadp">
                   </div>
 
-                  <div class="text-label2">FREGUESIA</div>
-                  <div class="form-group mt-4 mb-5 d-flex input-material">
-                        <input type="text" id="freguesia" name="freguesia">
-                  </div>
 
                   <input type="hidden" id="latitude" name="latitude">
                   <input type="hidden" id="longitude" name="longitude">

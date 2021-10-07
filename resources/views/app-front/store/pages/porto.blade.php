@@ -11,7 +11,7 @@
     </div>
     <div class="container">
         <div class="filtrar">
-            <p>ESCOLHA UM <br> PORTO</p>
+            <p>ESCOLHA UMA <br> CIDADE</p>
             <div>
                 <button class="btn btn-filtro" data-bs-toggle="modal" data-bs-target="#exampleModal">FILTRAR</button>
             </div>

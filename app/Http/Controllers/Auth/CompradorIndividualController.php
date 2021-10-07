@@ -101,12 +101,11 @@ class CompradorIndividualController extends Controller
 
         $dados = $request->all();
         $comprador = Comprador::create([
-            'user_id' => 25,
+            'user_id' => 1,
             'name' => $request->name,
-            'lastname' => $request->sobrenome,
             'email' => $request->email,
             'password' => Hash::make($random),
-            'telemovel' => $request->telemovel,
+            'telefone' => $request->telefone,
             'codigo' =>  $random,
             'type' => 'individual',
         ]);
@@ -114,20 +113,21 @@ class CompradorIndividualController extends Controller
         $save = BuyerInduvidual::create([
             'comprador_id' => $comprador->id,
             'morada' => $request->morada,
-            'nif' => $request->nif,
+            'cpf' => $request->cpf,
         ]);
 
         $save = AdressBuyer::create([
             'user_id' => $comprador->id,
-            'codigo_postal' => $request->codigo_postal,
-            'morada' => $request->morada,
-            'regiao' => $request->regiao,
-            'distrito' => $request->distrito,
-            'conselho' => $request->conselho,
-            'freguesia' => $request->freguesia,
+            'cep'     => $request->cep,
+            'cidade' => $request->cidade,
+            'estado' => $request->estado,
+            // 'pais' => $request->pais,
+            'bairro' => $request->bairro,
+            'rua' => $request->rua,
+            'numero' => $request->numero,
+            'complemento' => $request->complemento,
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
-            'porta' => $request->porta,
         ]);
 
 
@@ -178,8 +178,7 @@ class CompradorIndividualController extends Controller
         $this->validate($request, $rules, $customMessages);
 
         $compradorDados['name'] = $request->name;
-        $compradorDados['lastname'] = $request->lastname;
-        $compradorDados['telemovel'] = $request->telemovel;
+        $compradorDados['telefone'] = $request->telemovel;
         if($request->password) $compradorDados['password'] = Hash::make($request->password);
 
         $comprador = Comprador::find($id)->update($compradorDados);

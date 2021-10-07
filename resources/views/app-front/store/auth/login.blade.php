@@ -32,7 +32,7 @@
                     </div>
             </form>
             <div class="text-register text-center my-5">
-                <a href="{{ route('comprador.create') }}">Não tem registo? </a>
+                <a href="{{ route('comprador.create') }}">Não tem cadastro? </a>
             </div>
         </div>
     </div>
