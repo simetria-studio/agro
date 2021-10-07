@@ -47,12 +47,6 @@ class EspecieController extends Controller
 
         $especie = Especie::create([
             'nome_portugues' => $data['nome_portugues'],
-            'nome_ingles' => $data['nome_ingles'],
-            'nome_espanhol' => $data['nome_espanhol'],
-            'nome_cientifico' => $data['nome_cientifico'],
-            'codigo_fao' => $data['codigo_fao'],
-            'codigo_lota' => $data['codigo_lota'],
-            'tamanho_minimo' => $data['tamanho_minimo'],
             'image' => $name,
             'margem' => $data['margem'],
         ]);

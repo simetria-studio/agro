@@ -57,7 +57,6 @@ class PortoController extends Controller
             'nome' => $data['nome'],
             'registro' => $request->input('registro'),
             'descarga' => $request->input('descarga'),
-            'controle_veterinario' => $data['veterinario'] ? $data['controle_veterinario'] : null,
             'image' => $name,
             'sigla' => $request->input('sigla'),
             'codigo_postal' => $request->input('codigo_postal'),
@@ -72,15 +71,15 @@ class PortoController extends Controller
 
 
         ]);
-        if ($porto) {
+        // if ($porto) {
 
-            foreach ($data['especies'] as $key => $especi) {
-                EspecieToPorto::create([
-                    'porto_id' => $porto->id,
-                    'especie_id' => $especi,
-                ]);
-            }
-        }
+        //     foreach ($data['especies'] as $key => $especi) {
+        //         EspecieToPorto::create([
+        //             'porto_id' => $porto->id,
+        //             'especie_id' => $especi,
+        //         ]);
+        //     }
+        // }
 
 
         return redirect()->route('admin.porto')->with('success', "Porto $porto->nome criado com sucesso!");

@@ -63,7 +63,7 @@
       <div class="container mt-3">
             <div class="ativos text-uppercase px-4">
                   <div class="py-4 text-center">
-                        <h3 href="">Peixes à venda na plataforma</h3>
+                        <h3 href="">Produtos à venda na plataforma</h3>
                   </div>
                   <div class="d-flex">
                         <div>
@@ -95,7 +95,7 @@
       <div class="container mt-3">
             <div class="peixes text-uppercase px-4">
                   <div class="py-4 text-center">
-                        <h3 href="">Vender o seu peixe</h3>
+                        <h3 href="">Vender o seu produto</h3>
                   </div>
                   <div class="button text-center">
                         <a href="{{ route('pescador.produto') }}">INICIAR VENDA</a>

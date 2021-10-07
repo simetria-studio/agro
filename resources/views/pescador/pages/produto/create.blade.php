@@ -16,7 +16,7 @@
                   <a href="javascript:history.back()"> <i class="fas fa-chevron-left"></i> Voltar</a>
             </div>
             <div>
-                  <span>CADASTRO DE PEIXE</span>
+                  <span>CADASTRO DE PRODUTO</span>
             </div>
       </div>
 </div>
@@ -36,7 +36,7 @@
             <div class="mt-3">
                   <div class="form-group input-material">
                         <select class="form-control select2" name="especie_id" id="margem">
-                              <option>Escolha a Espécie</option>
+                              <option>Escolha o produto</option>
                               @foreach ($especies as $especie)
                               <option value="{{ $especie->id }}" data-margem="{{ $especie->margem }}">{{ $especie->nome_portugues }}</option>
                               @endforeach
@@ -47,7 +47,7 @@
                   <div class="form-group input-material">
 
                         <select class="form-control select2" name="porto_id" id="exampleFormControlSelect1">
-                              <option>Escolha o Porto de descarga</option>
+                              <option>Escolha a cidade</option>
                               @foreach ($portos as $porto)
                               <option value="{{ $porto->id }}">{{ $porto->nome }}</option>
                               @endforeach
@@ -56,22 +56,13 @@
                   </div>
 
                   <div class="form-group input-material">
-                        <select class="form-control" name="embarcacao" id="exampleFormControlSelect1">
-                              <option>Escolha a Embarcação</option>
+                        <select class="form-control" name="fazenda" id="exampleFormControlSelect1">
+                              <option>Escolha a sua proprioedade</option>
 
-                              <option value="{{ auth()->user()->nome_embarcacao }}">
-                                    {{ auth()->user()->nome_embarcacao }}</option>
-                              <option value="{{ auth()->user()->nome_embarcacao2 }}">
-                                    {{ auth()->user()->nome_embarcacao2 }}</option>
-                              <option value="{{ auth()->user()->nome_embarcacao3 }}">
-                                    {{ auth()->user()->nome_embarcacao3 }}</option>
-
+                              <option value="{{ auth()->user()->fazenda }}">
+                                    {{ auth()->user()->fazenda }}</option>
 
                         </select>
-                  </div>
-                  <div class="form-group input-material">
-                        <input type="text" class="form-control" name="zona">
-                        <label for="name-field">Zona de Pesca</label>
                   </div>
                   <div class="form-group input-material">
                         <select class="form-control" name="tamanho" id="exampleFormControlSelect1">
@@ -82,15 +73,7 @@
 
                         </select>
                   </div>
-                  <div class="form-group input-material">
-                        <select class="form-control" name="arte" id="exampleFormControlSelect1">
-                              <option>Escolha a Arte</option>
-                              @foreach ($artes as $arte)
-                              <option value="{{ $arte->name }}">{{ $arte->name }}</option>
-                              @endforeach
 
-                        </select>
-                  </div>
                   <div class="row">
                         <div class="form-group col-6 input-material">
                               <label for="name-field">Kg</label>
@@ -109,7 +92,7 @@
 
                   <div id="unidade" class="form-group d-none input-material">
                         <input type="number" class="form-control" name="quantidade_unidade">
-                        <label for="name-field">Quantos peixes tem</label>
+                        <label for="name-field">Quantos produtos tem</label>
                   </div>
                   <div id="kg_total" class="form-group d-none input-material">
                         <input type="number" class="form-control" name="total_kg">

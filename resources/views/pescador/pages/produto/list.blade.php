@@ -16,7 +16,7 @@
                   <a href="javascript:history.back()"> <i class="fas fa-chevron-left"></i> Voltar</a>
             </div>
             <div>
-                  <span>LISTA DE PEIXES</span>
+                  <span>LISTA DE PRODUTOS</span>
             </div>
       </div>
 </div>
@@ -34,7 +34,7 @@
       <div class="container">
             <div class="d-flex justify-content-around text-center">
                   <div>
-                        <p>Espécie</p>
+                        <p>Prod.</p>
                   </div>
                   <div>
                         <p>Quant</p>

@@ -4,15 +4,15 @@
 
 
     <div class="card m-5 col-md-10">
-        <p>Espécies</p>
+        <p>Produtos</p>
         <div>
             <a href="{{ route('admin.especies.create') }}"><button class="btn btn-dark my-2">Adicionar
-                    Espécie</button></a>
+                    Produto</button></a>
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Espécie</th>
+                        <th scope="col">Produto</th>
                         <th scope="col">Foto</th>
                         <th scope="col">Acão</th>
                     </tr>

@@ -12,11 +12,11 @@ class Produto extends Model
 
 
     protected $fillable = [
-        
+
         'pescador_id',
         'especie_id',
         'porto_id',
-        'embarcacao',
+        'fazenda',
         'zona',
         'tamanho',
         'quantidade_kg',
@@ -42,5 +42,5 @@ class Produto extends Model
     {
         return $query->where('created_at', '>', Carbon::yesterday());
     }
-    
+
 }
