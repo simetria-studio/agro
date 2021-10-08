@@ -6,6 +6,7 @@ use App\Models\Porto;
 use App\Models\Pescador;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\SellingToCity;
 use Illuminate\Support\Facades\Hash;
 
 class PescadorRegController extends Controller
@@ -39,11 +40,12 @@ class PescadorRegController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->all();
         $dados = Pescador::create([
             'name'              => $request->name,
             'email'             => $request->email,
             'password'          => Hash::make($request->password),
-            'telefone'          => $request->ddd_telemovel.' '.$request->telemovel,
+            'telefone'          => $request->ddd_telemovel . ' ' . $request->telemovel,
             'cpf'               => $request->cpf,
             'fazenda'   => $request->nome_fazenda,
             // 'nome_embarcacao2'  => $request->nome_embarcacao_2 ?? null,
@@ -59,6 +61,7 @@ class PescadorRegController extends Controller
             'latitude' => $request->latitude,
             'longitude' => $request->longitude,
         ]);
+
 
         return redirect()->route('pescador.successo');
     }

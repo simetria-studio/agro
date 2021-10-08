@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="botao-v">
-        <a class="btn btn-voltar" href="{{ route('store.produto', $produto->porto_id) }}">VOLTAR</a>
+        <a class="btn btn-voltar" href="#">VOLTAR</a>
     </div>
     <div class="container">
         <div class="detalhes mt-6 text-center">
@@ -60,9 +60,9 @@
                         <input type="hidden" name="pescador_id" value="{{ $produto->pescador_id }}">
                         <input type="hidden" name="embarcacao" value="{{ $produto->embarcacao }}">
                         <input type="hidden" name="margem" value="{{ $produto->especies->margem }}">
-                        <input type="hidden" name="porto" value="{{ $produto->portos->nome }}">
-                        <input type="hidden" name="porto_id" value="{{ $produto->portos->id }}">
-                        <input type="hidden" name="sigla" value="{{ $produto->portos->sigla }}">
+                        <input type="hidden" name="porto" value="{{ $cidade }}">
+                        <input type="hidden" name="porto_id" value="{{ $cidade_id }}">
+                        <input type="hidden" name="sigla" value="{{ $sigla }}">
 
                     </div>
                     <div class="mt-3">

@@ -42,5 +42,9 @@ class Produto extends Model
     {
         return $query->where('created_at', '>', Carbon::yesterday());
     }
+    public function cidade()
+    {
+        return $this->hasMany(SellingToCity::class, 'produto_id');
+    }
 
 }

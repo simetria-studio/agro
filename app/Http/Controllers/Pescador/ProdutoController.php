@@ -8,6 +8,7 @@ use App\Models\Especie;
 use App\Models\Produto;
 use App\Models\Tamanho;
 use Illuminate\Http\Request;
+use App\Models\SellingToCity;
 use App\Http\Controllers\Controller;
 
 class ProdutoController extends Controller
@@ -48,11 +49,11 @@ class ProdutoController extends Controller
     {
 
         $user = auth()->user()->id;
-
+        $data = $request->all();
         $produto = Produto::create([
             'pescador_id' => $user,
             'especie_id' => $request->especie_id,
-            'porto_id' => $request->porto_id,
+            'porto_id' => null,
             'fazenda' => $request->fazenda,
             'tamanho' => $request->tamanho,
             'quantidade_kg' => $request->quantidade_kg ? $request->quantidade_kg : $request->total_kg,
@@ -63,6 +64,15 @@ class ProdutoController extends Controller
             // 'image' => $request->image,
             // 'status' => $request->status,
         ]);
+        if ($produto) {
+            foreach ($data['cidades'] as $key => $cidade) {
+                SellingToCity::create([
+                    'user_id' => $user,
+                    'produto_id' => $produto->id,
+                    'cidade_id' => $cidade,
+                ]);
+            }
+        }
         return redirect()->route('pescador.index')->with('success', 'Criado com sucesso!');
     }
 
