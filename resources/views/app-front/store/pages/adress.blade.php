@@ -14,7 +14,7 @@
         <div class="container">
             <div class="mt-5 mb-5 text-center">
                 <div>
-                    <h2 class="titulo">MORADA ATUAL</h2>
+                    <h2 class="titulo">ENDEREÇO ATUAL</h2>
                 </div>
                 <div class="endereco">
                     <p>{{ $adresses->rua }}, {{ $adresses->cep }}, {{ $adresses->bairro }}</p>
