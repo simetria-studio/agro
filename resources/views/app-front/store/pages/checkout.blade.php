@@ -14,7 +14,7 @@
         <div class="container">
             <div class="mt-5 mb-5 text-center">
                 <div>
-                    <h2 class="titulo">MORADA ATUAL</h2>
+                    <h2 class="titulo">ENDEREÇO ATUAL</h2>
                 </div>
                 <div class="endereco">
                     <p>{{ $adresses->rua }}, {{ $adresses->cep }}, {{ $adresses->bairo }}</p>
@@ -74,7 +74,7 @@
                                 <span> {{ $item->id }}</span>
                             </div>
                             <div class="d-flex itens">
-                                <p>Espécie:</p>
+                                <p>Produto:</p>
                                 <span>{{ $item->name }}</span>
                             </div>
 
@@ -122,7 +122,7 @@
         @endphp
         @foreach ($portos as $porto)
             <div class="container text-uppercase">
-                <h2 class="titulo">PORTO: {{ $porto[0] }}</h2>
+                <h2 class="titulo">CIDADE: {{ $porto[0] }}</h2>
             </div>
             @php
                 $pegarValor = getValue($porto[2]);
