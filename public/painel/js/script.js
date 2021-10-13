@@ -23,7 +23,7 @@ $(document).ready(function(){
         }
     });
 
-    $('#ceping').mask('0000-000');
+    $('#ceping').mask('00000-000');
 
     $('.select2').select2();
 

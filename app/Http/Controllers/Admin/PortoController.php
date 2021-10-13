@@ -218,11 +218,34 @@ class PortoController extends Controller
 
     public function buscaCep(Request $request)
     {
-        $valor = $request->search;
+          $valor = $request->search;
         $cep = str_replace('-', '', $valor);
 
-        $url = Http::get('https://api.duminio.com/ptcp/ptapi60ec808f3e8951.33243239/' . $cep);
+        $url2 = Http::get("https://viacep.com.br/ws/$cep/json/");
+        // $dadosFirst = str_replace('<i>Desconhecido</i>', '"false"', $url->body());
+        // $dadosFirst = str_replace(' ,', '"false",', $dadosFirst);
+        // $dadosFirst = json_decode($dadosFirst);
 
-        return $url->collect();
+        // if($dadosFirst){
+        //     if($dadosFirst->Latitude !== 'false' && $dadosFirst->Longitude !== 'false'){
+        //         return response()->json($dadosFirst);
+        //     }
+        // }
+
+        $url = Http::get('https://maps.google.com/maps/api/geocode/json?address='.$cep.'&sensor=false&key=AIzaSyCcTnukB7zVZVr3T-Pk6-Lptswge0BDOXg');
+        $google = json_decode($url->collect());
+        $api = json_decode($url2->collect());
+        $dados = [
+            'Cep' => $api->cep,
+            'Rua' => $api->logradouro,
+            'Bairro' => $api->bairro,
+            'Cidade' => $api->localidade,
+            'Estado' => $api->uf,
+            'Latitude' => $google->results[0]->geometry->location->lat,
+            'Longitude' => $google->results[0]->geometry->location->lng,
+        ];
+
+
+        return response()->json($dados);
     }
 }

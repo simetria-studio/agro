@@ -138,7 +138,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('porto/tax/{id}', [PortoController::class, 'tax'])->name('admin.porto.tax');
     Route::post('porto/tax/store', [PortoController::class, 'taxStore'])->name('admin.porto.tax.store');
 
-    Route::get('adress/cep', [PortoController::class, 'buscaCep'])->name('adress.cep.admin');
+    Route::get('cep', [PortoController::class, 'buscaCep'])->name('adress.cep.admin');
 
     Route::get('estatistica/{id}', [EstatiscaDiariaController::class, 'index'])->name('admin.estatistica');
     Route::post('estatistica/store', [EstatiscaDiariaController::class, 'store'])->name('admin.estatistica.store');
@@ -265,7 +265,7 @@ Route::group(['middleware' => ['auth:buyer']], function () {
     Route::get('store/checkout/adress', [CheckoutController::class, 'adress'])->name('store.checkout.adress');
 
     Route::get('store/adress', [AdressController::class, 'index'])->name('store.adress');
-    Route::get('adress/cep', [AdressController::class, 'buscaCep'])->name('adress.cep');
+
 
     Route::post('store/adress/save', [AdressController::class, 'store'])->name('store.adress.save');
 

@@ -103,6 +103,6 @@ class PescadorController extends Controller
 
         Auth::guard('pescador')->logout();
 
-        return redirect('login-pescador');
+        return redirect('login-produtor');
     }
 }

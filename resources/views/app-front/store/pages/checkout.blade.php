@@ -17,7 +17,7 @@
                     <h2 class="titulo">MORADA ATUAL</h2>
                 </div>
                 <div class="endereco">
-                    <p>{{ $adresses->morada }}, {{ $adresses->codigo_postal }}, {{ $adresses->distrito }}</p>
+                    <p>{{ $adresses->rua }}, {{ $adresses->cep }}, {{ $adresses->bairo }}</p>
                     <div class="mt-3">
                         <button class="btn btn-editar-morada">EDITAR MORADA</button>
                     </div>

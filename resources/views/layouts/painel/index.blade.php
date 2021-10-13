@@ -285,17 +285,16 @@
             $value = $('#cep').val();
             $.ajax({
                 type: 'get',
-                url: '{{ url('cep') }}',
+                url: '{{ url('admin/cep') }}',
                 data: {
                     'search': $value
                 },
                 success: function(data) {
                     console.log(data);
-                    $('#morada').val(data.Morada);
-                    $('#regiao').val(data.Localidade);
-                    $('#distrito').val(data.Distrito);
-                    $('#conselho').val(data.Concelho);
-                    $('#freguesia').val(data.Freguesia);
+                    $('#rua').val(data.Rua);
+                    $('#bairro').val(data.Bairro);
+                    $('#cidade').val(data.Cidade);
+                    $('#estado').val(data.Estado);
                     $('#latitude').val(data.Latitude);
                     $('#longitude').val(data.Longitude);
                 }
